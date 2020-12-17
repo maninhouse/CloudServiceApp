@@ -12,13 +12,15 @@
     </div>
 </div>
 
-<p>{{message}}</p>
-<img src="{{image_url}}" border="1">
-<img src="C:/Users/user/Dropbox/螢幕截圖/螢幕截圖 2020-06-16 15.56.41.png">
 
-<form action="/" method="post"> 
-    <button name="openBtn" type="submit">open file</button> 
+
+
+<form action="/" id="submit_form" name = "submit_form" method="post">
+    <input type="file" name="open_file" id="open_file">
+    <button name="enter" type="submit">確認</button> 
 </form>
+
+<h1>{{msg}}</h1>
 
 {% endblock %}
 

@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from flask import request
 import tkinter as tk
 from tkinter import filedialog
 
@@ -17,5 +18,10 @@ def index():
 
 @app.route('/', methods=['POST']) 
 def open_file1():
-    msg = open_file()
-    return render_template('public/index.html',message=msg, image_url=msg)
+    #msg = open_file()
+    print('-----------------------')
+    
+    image_url = request.values.get('open_file')
+    print(image_url)
+    
+    return render_template('public/index.html', msg="")
