@@ -12,12 +12,20 @@
     </div>
 </div>
 
-<button onclick="{{func}}">press me</button>
+<p>{{message}}</p>
+<img src="{{image_url}}" border="1">
+<img src="C:/Users/user/Dropbox/螢幕截圖/螢幕截圖 2020-06-16 15.56.41.png">
+
+<form action="/" method="post"> 
+    <button name="openBtn" type="submit">open file</button> 
+</form>
 
 {% endblock %}
 
 {% block script %}
+<!--
 <script>
   alert("Template inheritance is awesome");
 </script>
+-->
 {% endblock %}

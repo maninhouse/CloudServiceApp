@@ -9,9 +9,13 @@ def open_file():
     root.withdraw()
     image_url = filedialog.askopenfilename()  
     root.destroy()
+    return image_url
 
 @app.route('/')
 def index():
-    return render_template('public/index.html', title="home", func=open_file())
+    return render_template('public/index.html')
 
-
+@app.route('/', methods=['POST']) 
+def open_file1():
+    msg = open_file()
+    return render_template('public/index.html',message=msg, image_url=msg)

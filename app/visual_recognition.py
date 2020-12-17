@@ -3,6 +3,7 @@ from ibm_watson import VisualRecognitionV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 
+def visual_recognition(api_key = 'wcuBCIc7I_KCIQQW-goNo4m8FFioGUnWDgPKPd6fsluu', api_url = 'https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/55753b10-37c4-4896-887e-aef29ca77bef'):
 apikey = 'wcuBCIc7I_KCIQQW-goNo4m8FFioGUnWDgPKPd6fsluu'#input('api key:')
 apiurl = 'https://api.us-south.visual-recognition.watson.cloud.ibm.com/instances/55753b10-37c4-4896-887e-aef29ca77bef'#input('url:')
 
