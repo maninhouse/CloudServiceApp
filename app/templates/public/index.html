@@ -13,21 +13,15 @@
 </div>
 
 
-
-
 <form action="/" id="submit_form" name = "submit_form" method="post">
-    <input type="file" name="open_file" id="open_file">
-    <button name="enter" type="submit">確認</button> 
+    <input type="text" name="input_url" id="input_url">
+    <button name="enter" type="submit">開始辨識</button> 
 </form>
 
-<h1>{{msg}}</h1>
+<p>{{msg}}</p>
 
 {% endblock %}
 
 {% block script %}
-<!--
-<script>
-  alert("Template inheritance is awesome");
-</script>
--->
+
 {% endblock %}

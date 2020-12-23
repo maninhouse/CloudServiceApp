@@ -3,14 +3,7 @@ from flask import render_template
 from flask import request
 import tkinter as tk
 from tkinter import filedialog
-
-def open_file():
-    #放入要讀取照片的位置
-    root = tk.Tk()
-    root.withdraw()
-    image_url = filedialog.askopenfilename()  
-    root.destroy()
-    return image_url
+from . import visual_recognition as vr
 
 @app.route('/')
 def index():
@@ -18,10 +11,7 @@ def index():
 
 @app.route('/', methods=['POST']) 
 def open_file1():
-    #msg = open_file()
-    print('-----------------------')
     
-    image_url = request.values.get('open_file')
-    print(image_url)
-    
-    return render_template('public/index.html', msg="")
+    image_url = request.values.get('input_url')
+    result = vr.visual_recognition(image_url = image_url)
+    return render_template('public/index.html', msg=result)
