@@ -5,20 +5,42 @@
 {% block main %}
 
 <div class="container">
+    <div class="bg-light p-5 rounded">
     <div class="row">
         <div class="col">
-            <h1>Home</h1>
+            <h1>Visual Recognition</h1>
+            <br>
         </div>
     </div>
+
+    <form action="/" id="submit_form" name = "submit_form" method="post">
+        <label>想要辨識的東西：</label>
+        <select name="select" id="select">
+            　<option value="monkey">猴子</option>
+            　<option value="motorcycle">機車</option>
+            　<option value="basketball">籃球</option>
+            　<option value="baseball">棒球</option>
+            <option value="tennis">網球</option>
+            <option value="dog">狗</option>
+            <option value="cat">貓</option>
+            <option value="person">人</option>
+            <option value="hamburger">漢堡</option>
+            <option value="bicycle">腳踏車</option>
+            <option value="football">足球</option>
+
+            </select>
+        <label>輸入圖片URL：</label>
+        <input type="text" name="input_url" id="input_url">
+        <button name="enter" type="submit">開始辨識</button> 
+        
+    </form>
+    <br>
+    <img src="{{img}}" width="300"/>
+    <br>
+    <p>{{msg}}</p>
+    
+    </div>
 </div>
-
-
-<form action="/" id="submit_form" name = "submit_form" method="post">
-    <input type="text" name="input_url" id="input_url">
-    <button name="enter" type="submit">開始辨識</button> 
-</form>
-
-<p>{{msg}}</p>
 
 {% endblock %}
 

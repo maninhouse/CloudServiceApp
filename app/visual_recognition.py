@@ -20,4 +20,5 @@ def visual_recognition(image_url, api_key = 'wcuBCIc7I_KCIQQW-goNo4m8FFioGUnWDgP
     classes_result = visual_recognition.classify(url=image_url).get_result()
     
     print(json.dumps(classes_result, indent=2))
+    
     return json.dumps(classes_result, indent=2)
